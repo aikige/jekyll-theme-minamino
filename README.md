@@ -14,3 +14,7 @@ This project is also used as source of the website.
 * Support for [Google AdSense](https://www.google.com/adsense).
 
 For detail about theme, please refer [`about.md`](about.md).
+
+## Demo
+
+https://aikige.github.io/minamino-aikido/

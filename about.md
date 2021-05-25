@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-The theme minamino-aikido ([github](https://github.com/aikige/minamino-aikido)) is created for website of [Minamino Aikido Club](https://minamino-aikido.github.io/), based on [minima-2.5.1](https://github.com/jekyll/minima/releases/tag/v2.5.1).
+The theme minamino-aikido ([github repository](https://github.com/aikige/minamino-aikido)) is created for website of [Minamino Aikido Club](https://minamino-aikido.github.io/), based on [minima-2.5.1](https://github.com/jekyll/minima/releases/tag/v2.5.1).
 
 ## Features
 
@@ -12,7 +12,7 @@ The theme minamino-aikido ([github](https://github.com/aikige/minamino-aikido)) 
 * Support for [Google AdSense](https://www.google.com/adsense).
 * Image alignment control for markdown.
 
-For detail about these features, please check [Getting Started](getting_started.html).
+For detail about these features, please refer [Getting Started](getting_started.html).
 
 ## Layouts 
 
@@ -26,8 +26,12 @@ For detail about these features, please check [Getting Started](getting_started.
 
 For wide-enough screen, 3-row based tile-like design is used.
 
-![1200px](assets/img/screenshot_1200.png)
+![Home Layout](assets/img/screenshot_1200.png)
+
+Home layout is using responsive design.
 
 ### Page / Post
 
 Simple 1 row design is used for Pages and Blog-Posts.
+
+![Page Layout](assets/img/screenshot_page.png)

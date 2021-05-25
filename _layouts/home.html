@@ -39,19 +39,19 @@ layout: default
   {%  assign date_format = site.minamino.date_format | default: "%F" %}
 
   <div class="post-list">
-    {% if site.embed_google_calendar %}
+    {% if site.google_calendar_url %}
     <div class="post-list-item">
       {% include google-calendar.html %}
     </div>
     {% endif %}
 
-    {% if site.embed_amazon_ads %}
+    {% if site.amazon_ad_urls %}
     <div class="post-list-item">
       {% include amazon-ads.html %}
     </div>
     {% endif %}
 
-    {% if site.embed_adsense %}
+    {% if site.adsense_client_id %}
     <div class="post-list-item">
       {%  include google-ad-block.html %}
     </div>
