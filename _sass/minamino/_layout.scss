@@ -247,7 +247,7 @@ nav.pagination {
   /* margin-left: 0; */
   display: flex;
   flex-wrap: wrap;
-  column-gap: $column-spacing;
+  gap: $column-spacing;
   justify-content: center;
   @include media-query($on-1row) {
     display: block;
