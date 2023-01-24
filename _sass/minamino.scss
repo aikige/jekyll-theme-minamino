@@ -11,7 +11,7 @@ $title-line-height: 1.25 !default;
 
 $spacing-unit:     30px !default;
 $vspacing-unit:    15px !default;
-$column-spacing:   6px !default;
+$card-spacing:     9px !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
@@ -29,14 +29,13 @@ $content-width:     1020px !default;
 $post-width:        800px !default;
 
 // Content card size
-$card-unit-width:   (($content-width - ($spacing-unit * 2) - ($column-spacing * 2)) / 3) !default;
+$card-unit-width:   (($content-width - ($spacing-unit * 2) - ($card-spacing * 2)) / 3) !default;
 $card-unit-height:  300px !default;
-/*$card-unit-spacing: 5px !default;*/
 
 // Threshold for responsive design
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
-$on-1row:          ($card-unit-width * 2 + $column-spacing + $spacing-unit * 2 - 1px) !default;
+$on-1row:          ($card-unit-width * 2 + $card-spacing + $spacing-unit * 2 - 1px) !default;
 $on-2row:          ($content-width - 1px) !default;
 
 // Use media queries like this:

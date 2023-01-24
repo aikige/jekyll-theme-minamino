@@ -208,10 +208,6 @@
   text-align: center;
   @include media-query($on-2row) {
     flex: 0;
-    /*
-    margin: 0 auto;
-    padding: 0 10px;
-    */
   }
   @include media-query($on-1row) {
     flex: 0;
@@ -232,7 +228,6 @@ nav.pagination {
  */
 .page-content {
   padding: $vspacing-unit 0;
-  //flex: 1;
 }
 
 .page-heading {
@@ -255,13 +250,11 @@ nav.pagination {
 }
 
 .post-list-item {
-  //width: $card-unit-width - ($card-unit-spacing * 2);
   width: $card-unit-width;
   height: $card-unit-height;
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  //margin: $card-unit-spacing;
   background-repeat: no-repeat;
   background-position: center;
   @include media-query($on-1row) {
