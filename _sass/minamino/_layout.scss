@@ -186,7 +186,7 @@
 
 .home-content-container {
   display: flex;
-  column-gap: $column-spacing;
+  column-gap: $card-spacing;
   justify-content: center;
   @include media-query($on-2row) {
     display: block;
@@ -242,7 +242,7 @@ nav.pagination {
   /* margin-left: 0; */
   display: flex;
   flex-wrap: wrap;
-  gap: $column-spacing;
+  gap: $card-spacing;
   justify-content: center;
   @include media-query($on-1row) {
     display: block;
