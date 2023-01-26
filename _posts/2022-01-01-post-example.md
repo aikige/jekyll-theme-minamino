@@ -17,14 +17,21 @@ This is a sample article.
 
 ### Floating image
 
+Float image to right:
 ```
 ![right](https://1.bp.blogspot.com/-36JFMZJkRzQ/YGb7rmCVUII/AAAAAAAAjls/PJqguHshxvEO40z9sIOTRk0ctQVN1B1pQCLcBGAsYHQ/s400/judo_boy_w_mask.jpg)
 ```
 
 ![right](https://1.bp.blogspot.com/-36JFMZJkRzQ/YGb7rmCVUII/AAAAAAAAjls/PJqguHshxvEO40z9sIOTRk0ctQVN1B1pQCLcBGAsYHQ/s400/judo_boy_w_mask.jpg)
+
+Clear:
+```
+<hr class="clear">
+```
 
 <hr class="clear">
 
+Float image to left:
 ```
 ![left](https://1.bp.blogspot.com/-36JFMZJkRzQ/YGb7rmCVUII/AAAAAAAAjls/PJqguHshxvEO40z9sIOTRk0ctQVN1B1pQCLcBGAsYHQ/s400/judo_boy_w_mask.jpg)
 ```
