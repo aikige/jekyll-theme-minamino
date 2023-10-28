@@ -186,35 +186,30 @@
 .home {
   display: grid;
   gap: $card-spacing;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr;
   @include media-query($on-2row) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
-  @include media-query($on-1row) {
-    display: block;
-  }
+}
+
+.home > * {
+  justify-content: center;
 }
 
 .home-content {
-  justify-content: center;
-  grid-column: 1/4;
+  grid-column: 1/3;
 }
 
-.home-content-with-tweet {
-  justify-content: center;
-  grid-column: 1/3;
+.home-w-tweet {
+  /* no special setting */
 }
 
 .tweet-block {
-  text-align: center;
-  @include media-query($on-2row) {
-    grid-column: 1/3;
-  }
+  /* no special setting */
 }
 
 .post-list {
-  grid-column: 1/3;
-  justify-content: center;
+  /* no special setting */
 }
 
 .post-list-heading {
@@ -223,24 +218,22 @@
 
 .post-list-container, .post-sidebar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($card-unit-width, 1fr));
   grid-auto-rows: $card-unit-height;
   gap: $card-spacing;
+  grid-template-columns: repeat(auto-fit, minmax($card-unit-width, 1fr));
 }
 
-.post-sidebar {
-  @include media-query($on-2row) {
-    grid-column: 1/3;
+.post-list-container {
+  grid-template-columns: 1fr 1fr;
+  @include media-query($on-1row) {
+    grid-template-columns: 1fr;
   }
 }
 
 .post-list-item {
-  max-width: 100%;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
-  @include media-query($on-1row) {
-    width: auto;
-  }
 }
 
 .post-meta {
