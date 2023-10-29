@@ -41,7 +41,7 @@ layout: default
       {% for post in posts %}
       {%  if post.image %}
       {%    assign background_image = post.image %}
-      {%    capture background_image_style %}style="background-image: url({{background_image}});background-size:cover;"{% endcapture %}
+      {%    capture background_image_style %}style="background-image: url({{background_image}});"{% endcapture %}
       {%  else %}
       {%    capture background_image_style %}style="background-image: url({{"/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
       {%  endif %}
