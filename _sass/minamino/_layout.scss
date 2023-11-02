@@ -206,6 +206,9 @@
 
 .tweet-block {
   /* no special setting */
+  @include media-query($on-2row) {
+    padding: 0 $spacing-unit;
+  }
 }
 
 .post-list {
