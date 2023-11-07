@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Include YouTube video
+title: Include YouTube Video
 author: T.A
 description: How to post article which include youtube.
 ---
