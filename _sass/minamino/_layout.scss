@@ -333,11 +333,11 @@ hr.clear {
   }
 
   h3 {
-    @include relative-font-size(1.4);
+    @include relative-font-size(1.2);
   }
 
   h4 {
-    @include relative-font-size(1.3);
+    @include relative-font-size(1.0);
   }
 
   iframe {
