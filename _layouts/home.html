@@ -59,7 +59,7 @@ layout: default
       {% include google-calendar.html %}
     </div>
     {% endif %}
-    {% if site.amazon_ad_urls %}
+    {% if site.embed_amazon_ads and site.amazon_ad_urls %}
     <div class="post-list-item">
       {% include amazon-ads.html %}
     </div>
