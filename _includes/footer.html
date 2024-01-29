@@ -12,7 +12,6 @@
           {%- if site.email -%}
           <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {%- endif -%}
-          <li><a href="{{site.baseurl}}/{{ link index.html }}">Top Page</a></li>
           {% for page in site.pages %}
           {%  if page.path == 'sitemap.html' %}
           <li><a href="{{ site.baseurl }}/{{ page.path }}">Site Map</a></li>
