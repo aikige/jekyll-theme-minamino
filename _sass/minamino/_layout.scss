@@ -270,6 +270,26 @@ img.top {
   width: 100%;
 }
 
+.page-content, .post-content {
+  margin-bottom: $spacing-unit;
+  h2 {
+    @include relative-font-size(1.5);
+  }
+  h3 {
+    @include relative-font-size(1.2);
+  }
+  h4 {
+    @include relative-font-size(1.0);
+  }
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  h2:nth-child(n+2) { margin-top: 40px; }
+  h3:nth-child(n+2) { margin-top: 30px; }
+  h4:nth-child(n+2) { margin-top: 20px; }
+}
+
 /**
  * Page content
  */
