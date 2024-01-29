@@ -46,8 +46,10 @@ layout: default
       {%    capture background_image_style %}style="background-image: url({{"/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
       {%  endif %}
       <div class="post-list-item" {{ background_image_style }}>
-        <div class="post-meta">{{ post.date | date: date_format }}</div>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <div class="post-info">
+          <div class="post-meta">{{ post.date | date: date_format }}</div>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </div>
       </div>
       {% endfor %} <!-- in posts -->
     </div><!-- post-list-container -->

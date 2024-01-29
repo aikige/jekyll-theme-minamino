@@ -239,22 +239,25 @@
   background-position: center;
   background-size: cover;
   border: solid $grey-color-light 1px;
+  border-radius: 10px;
 }
 
-.post-meta {
-  font-size: $small-font-size;
+.post-info {
+  margin-top: 20px;
   background-color: rgba(255,255,255,0.9);
-  color: $grey-color;
-  padding: 0 $card-spacing;
-  margin-top: $vspacing-unit;
-}
+  padding: 15px;
 
-.post-link {
-  display: block;
-  background-color: rgba(255,255,255,0.9);
-  @include relative-font-size(1.2);
-  /* bottom: 0; margin-top: auto; *//* dose not work with grid layout */
-  padding: 0 $card-spacing;
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+    margin-bottom: 5px;
+  }
+
+  .post-link {
+    display: block;
+    @include relative-font-size(1.1);
+    /* bottom: 0; margin-top: auto; *//* dose not work with grid layout */
+  }
 }
 
 nav.pagination {
