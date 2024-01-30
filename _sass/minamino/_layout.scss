@@ -220,7 +220,7 @@
   @include relative-font-size(1.25);
 }
 
-.post-list-container, .post-sidebar {
+.post-list-container, .post-sidebar-container {
   display: grid;
   grid-auto-rows: $card-unit-height;
   gap: $card-spacing;

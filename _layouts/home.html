@@ -34,8 +34,9 @@ layout: default
   {% if posts.size > 0 %} <!-- start: posts -->
   {%  assign date_format = site.minamino.date_format | default: "%F" %}
   <div class="post-list">
-    {% if page.list_title %} <!-- start: post-list-heading -->
-    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {% if site.list_title %}
+    <!-- start: post-list-heading -->
+    <h2 class="post-list-heading">{{ site.list_title }}</h2>
     {% endif %} <!-- end: post-list-heading -->
     <div class="post-list-container">
       {% for post in posts %}
@@ -56,21 +57,28 @@ layout: default
     {% include pagination.html %}
   </div><!-- post-list -->
   <div class="post-sidebar">
-    {% if site.google_calendar_url %}
-    <div class="post-list-item">
-      {% include google-calendar.html %}
-    </div>
+    {% if site.list_title %}
+    <h2 class="post-list-heading">
+      &nbsp;<!-- place holder for layouting -->
+    </h2>
     {% endif %}
-    {% if site.embed_amazon_ads and site.amazon_ad_urls %}
-    <div class="post-list-item">
-      {% include amazon-ads.html %}
-    </div>
-    {% endif %}
-    {% if site.embed_adsense %}
-    <div class="post-list-item">
-      {%  include google-ad-block.html %}
-    </div>
-    {% endif %}
+    <div class="post-sidebar-container">
+      {% if site.google_calendar_url %}
+      <div class="post-list-item">
+        {% include google-calendar.html %}
+      </div>
+      {% endif %}
+      {% if site.embed_amazon_ads and site.amazon_ad_urls %}
+      <div class="post-list-item">
+        {% include amazon-ads.html %}
+      </div>
+      {% endif %}
+      {% if site.embed_adsense %}
+      <div class="post-list-item">
+        {%  include google-ad-block.html %}
+      </div>
+      {% endif %}
+    </div><!-- sidebar-container -->
   </div><!-- post-sidebar -->
   {% endif %} <!-- end posts -->
 

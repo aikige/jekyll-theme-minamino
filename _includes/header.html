@@ -15,8 +15,10 @@
             </svg>
           </span>
         </label>
-
-        <div class="trigger">
+        <script type="text/javascript">
+          function hideNav() { document.getElementById('nav-trigger').checked = false }
+        </script>
+        <div class="trigger" onclick="hideNav()">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
@@ -28,3 +30,4 @@
     {%- endif -%}
   </div>
 </header>
+<!-- vim: set sts=2 sw=2 expandtab: -->
