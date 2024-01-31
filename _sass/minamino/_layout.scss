@@ -389,9 +389,21 @@ hr.clear {
   }
 }
 
+.icon-left { width: 32px; height: 32px; fill: $grey-color; }
+.icon-home { width: 32px; height: 32px; fill: $grey-color; }
 .back {
-  margin-top: $spacing-unit;
-  clear: both;
+  margin: $spacing-unit auto;
   text-align: center;
+  vertical-align: middle;
+  .icon-left {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.page-link .icon-home {
+  display: inline-block;
+  vertical-align: 0px;
+  width: 18px; height: 18px;
+  fill: $text-color;
 }
 /* vim:set sts=2 sw=2 expandtab: */

@@ -59,6 +59,7 @@ $on-2row:          ($content-width - 1px) !default;
 
 // Import partials.
 @import
+  "data",
   "minamino/base",
   "minamino/layout",
   "minamino/syntax-highlighting",
