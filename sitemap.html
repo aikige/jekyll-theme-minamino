@@ -2,10 +2,15 @@
 layout: page
 title: Site Map
 ---
+<p>This is template of the Site Map, please edit as you need.</p>
 
-<h2><a href="{{site.baseurl}}{% link index.html %}">Top Page</a></h2>
+<h2><a href="{{ index.html | relative_url }}">Top Page</a></h2>
 
+{% if site.page_list_title %}
+<h2>{{ site.page_list_title }}</h2>
+{% else %}
 <h2>List of Pages</h2>
+{% endif %}
 
 <ul>
   {% assign paths = site.pages | map: "path" %}
@@ -17,7 +22,11 @@ title: Site Map
   {% endfor %}
 </ul>
 
+{% if site.post_list_title %}
+<h2>{{ site.post_list_title }}</h2>
+{% else %}
 <h2>Blog Posts</h2>
+{% endif %}
 
 <ul>
   {% for post in site.posts %}
