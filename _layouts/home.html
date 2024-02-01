@@ -34,9 +34,9 @@ layout: default
   {% if posts.size > 0 %} <!-- start: posts -->
   {%  assign date_format = site.minamino.date_format | default: "%F" %}
   <div class="post-list">
-    {% if site.list_title %}
+    {% if site.post_list_title %}
     <!-- start: post-list-heading -->
-    <h2 class="post-list-heading">{{ site.list_title }}</h2>
+    <h2 class="post-list-heading">{{ site.post_list_title }}</h2>
     {% endif %} <!-- end: post-list-heading -->
     <div class="post-list-container">
       {% for post in posts %}
@@ -57,7 +57,7 @@ layout: default
     {% include pagination.html %}
   </div><!-- post-list -->
   <div class="post-sidebar">
-    {% if site.list_title %}
+    {% if site.post_list_title %}
     <h2 class="post-list-heading">
       &nbsp;<!-- place holder for layouting -->
     </h2>

@@ -308,6 +308,7 @@ p img, img[alt^="center"] {
 
 img[alt^="right"] {
   margin: $vspacing-unit;
+  margin-right: 0;
   float: right;
   @include media-query($on-palm) {
     margin: $vspacing-unit auto;
@@ -317,6 +318,7 @@ img[alt^="right"] {
 
 img[alt^="left"] {
   margin: $vspacing-unit;
+  margin-left: 0;
   clear: both;
   float: left;
   @include media-query($on-palm) {
@@ -392,6 +394,7 @@ hr.clear {
 .icon-left { width: 32px; height: 32px; fill: $grey-color; }
 .icon-home { width: 32px; height: 32px; fill: $grey-color; }
 .back {
+  clear: both;
   margin: $spacing-unit auto;
   text-align: center;
   vertical-align: middle;
