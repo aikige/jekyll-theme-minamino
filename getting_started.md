@@ -93,11 +93,11 @@ Note that this parameter is expected to be an array.
 
 #### Syntax
 
-{% raw %}
+{%raw%}
 ```
-{% include image.html url="URL" class="CLASS" width="WIDTH" %}
+{%include image.html url="URL" class="CLASS" width="WIDTH"%}
 ```
-{% endraw %}
+{%endraw%}
 
 All parameters are optional.
 - `URL` is recognized as relative URL for source of image.
@@ -107,23 +107,23 @@ All parameters are optional.
   - otherwise image is centered.
 - `WIDTH` can be used as image width. If not specified, image is rendered with its own size (`width:auto`).
 
-{% raw %}
+{%raw%}
 ```
-{% include image.html url="assets/img/no_image.jpg"
-   description="test" width="100%" %}
+{%include image.html url="/assets/img/no_image.jpg"
+   description="test" width="100%"%}
 ```
-{% endraw %}
-{% include image.html url="assets/img/no_image.jpg" description="test" width="100%" %}
+{%endraw%}
+{%include image.html url="/assets/img/no_image.jpg" description="test" width="100%"%}
 
 <hr class="clear" />
 
-{% raw %}
+{%raw%}
 ```
-{% include image.html url="assets/img/no_image.jpg"
-   description="float right" class="right" width="25%" %}
+{%include image.html url="/assets/img/no_image.jpg"
+   description="float right" class="right" width="25%"%}
 ```
-{% endraw %}
-{% include image.html url="assets/img/no_image.jpg" description="float right" class="right" width="25%" %}
+{%endraw%}
+{%include image.html url="/assets/img/no_image.jpg" description="float right" class="right" width="25%"%}
 
 And sample text follows the image...
 
@@ -150,13 +150,13 @@ Text to check behavior or floated text.
 
 <hr class="clear" />
 
-{% raw %}
+{%raw%}
 ```
-{% include image.html url="assets/img/no_image.jpg"
-   description="float left" class="left" %}
+{%include image.html url="/assets/img/no_image.jpg"
+   description="float left" class="left"%}
 ```
-{% endraw %}
-{% include image.html url="assets/img/no_image.jpg" description="float left" class="left" %}
+{%endraw%}
+{%include image.html url="/assets/img/no_image.jpg" description="float left" class="left"%}
 
 And sample text follows the image...
 
@@ -182,7 +182,11 @@ Text to check behavior or floated text.
 Text to check behavior or floated text.
 
 <hr class="clear" />
+If specified `url` starts with `http:` or `https:` it is recognized as absolute URL and script will not apply `relative_url` filter.
 
+{%include image.html url="https://cdn.pixabay.com/photo/2024/01/19/18/00/hydrangeas-8519528_1280.jpg"%}
+
+<hr class="clear" />
 ### Image Floating (old method, not recommended)
 
 This is the CSS trick to align images in markdown document.
