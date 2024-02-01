@@ -93,9 +93,11 @@ Note that this parameter is expected to be an array.
 
 #### Syntax
 
-```{% raw %}
+{% raw %}
+```
 {% include image.html url="URL" class="CLASS" width="WIDTH" %}
-{% endraw %}```
+```
+{% endraw %}
 
 All parameters are optional.
 - `URL` is recognized as relative URL for source of image.
@@ -105,18 +107,22 @@ All parameters are optional.
   - otherwise image is centered.
 - `WIDTH` can be used as image width. If not specified, image is rendered with its own size (`width:auto`).
 
-```{% raw %}
+{% raw %}
+```
 {% include image.html url="assets/img/no_image.jpg"
    description="test" width="100%" %}
-{% endraw %}```
+```
+{% endraw %}
 {% include image.html url="assets/img/no_image.jpg" description="test" width="100%" %}
 
 <hr class="clear" />
 
-```{% raw %}
+{% raw %}
+```
 {% include image.html url="assets/img/no_image.jpg"
    description="float right" class="right" width="25%" %}
-{% endraw %}```
+```
+{% endraw %}
 {% include image.html url="assets/img/no_image.jpg" description="float right" class="right" width="25%" %}
 
 And sample text follows the image...
@@ -144,10 +150,12 @@ Text to check behavior or floated text.
 
 <hr class="clear" />
 
-```{% raw %}
+{% raw %}
+```
 {% include image.html url="assets/img/no_image.jpg"
    description="float left" class="left" %}
-{% endraw %}```
+```
+{% endraw %}
 {% include image.html url="assets/img/no_image.jpg" description="float left" class="left" %}
 
 And sample text follows the image...
