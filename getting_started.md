@@ -87,7 +87,95 @@ amazon_ad_urls: ['//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=F7F7F7&IS2=1&
 
 Note that this parameter is expected to be an array.
 
-### Image Alignment for Markdown
+### Image Width, Caption and Floating
+
+`image.html` provides function to control width, caption and floating for images.
+
+#### Syntax
+
+```{% raw %}
+{% include image.html url="URL" class="CLASS" width="WIDTH" %}
+{% endraw %}```
+
+All parameters are optional.
+- `URL` is recognized as relative URL for source of image.
+- `CLASS` is used to control styles, `right`, `left` and `center` is predefined.
+  - `right` makes image floated right.
+  - `left` makes image floated left.
+  - otherwise image is centered.
+- `WIDTH` can be used as image width. If not specified, image is rendered with its own size (`width:auto`).
+
+```{% raw %}
+{% include image.html url="assets/img/no_image.jpg"
+   description="test" width="100%" %}
+{% endraw %}```
+{% include image.html url="assets/img/no_image.jpg" description="test" width="100%" %}
+
+<hr class="clear" />
+
+```{% raw %}
+{% include image.html url="assets/img/no_image.jpg"
+   description="float right" class="right" width="25%" %}
+{% endraw %}```
+{% include image.html url="assets/img/no_image.jpg" description="float right" class="right" width="25%" %}
+
+And sample text follows the image...
+
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+
+<hr class="clear" />
+
+```{% raw %}
+{% include image.html url="assets/img/no_image.jpg"
+   description="float left" class="left" %}
+{% endraw %}```
+{% include image.html url="assets/img/no_image.jpg" description="float left" class="left" %}
+
+And sample text follows the image...
+
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+Text to check behavior or floated text.
+
+<hr class="clear" />
+
+### Image Floating (old method, not recommended)
 
 This is the CSS trick to align images in markdown document.
 
@@ -101,7 +189,10 @@ Examples:
 ```markdown
 ![center](assets/img/no_image.jpg) and sample text follows the image
 ```
-![center](assets/img/no_image.jpg) and sample text follows the image.
+![center](assets/img/no_image.jpg)
+*example of caption*
+
+and sample text follows the image.
 
 <hr class="clear">
 
@@ -131,12 +222,13 @@ Text to check behavior or floated text.
 Text to check behavior or floated text.
 Text to check behavior or floated text.
 
-<hr class="clear">
 
 ```markdown
 ![right](assets/img/no_image.jpg)
 ```
-![right](assets/img/no_image.jpg) and sample text follows the image.
+![right](assets/img/no_image.jpg)
+
+and sample text follows the image.
 
 Text to check behavior or floated text.
 Text to check behavior or floated text.

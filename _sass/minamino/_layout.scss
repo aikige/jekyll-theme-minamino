@@ -307,8 +307,7 @@ p img, img[alt^="center"] {
 }
 
 img[alt^="right"] {
-  margin: $vspacing-unit;
-  margin-right: 0;
+  margin: 0 0 $vspacing-unit $vspacing-unit;
   float: right;
   @include media-query($on-palm) {
     margin: $vspacing-unit auto;
@@ -317,13 +316,41 @@ img[alt^="right"] {
 }
 
 img[alt^="left"] {
-  margin: $vspacing-unit;
-  margin-left: 0;
+  margin: 0 $vspacing-unit $vspacing-unit 0;
   clear: both;
   float: left;
   @include media-query($on-palm) {
     margin: $vspacing-unit auto;
     float: none;
+  }
+}
+
+figure {
+  margin: $vspacing-unit auto;
+  width: fit-content;
+  img {
+    margin: 0, auto;
+  }
+  figcaption {
+    text-align: center;
+  }
+}
+figure.right {
+  clear: both;
+  float: right;
+  margin: 0 0 $vspacing-unit $vspacing-unit;
+  @include media-query($on-palm) {
+    float: none;
+    margin: $vspacing-unit auto;
+  }
+}
+figure.left {
+  clear: both;
+  float: left;
+  margin: 0 $vspacing-unit $vspacing-unit 0;
+  @include media-query($on-palm) {
+    float: none;
+    margin: $vspacing-unit auto;
   }
 }
 
