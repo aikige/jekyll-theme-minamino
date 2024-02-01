@@ -63,22 +63,14 @@ layout: default
     </h2>
     {% endif %}
     <div class="post-sidebar-container">
-      {% if site.google_calendar_url %}
+      {%if site.sidebar_list%}
+      {%  for sidebar in site.sidebar_list%}
       <div class="post-list-item">
-        {% include google-calendar.html %}
+        {%include {{sidebar}}%}
       </div>
-      {% endif %}
-      {% if site.embed_amazon_ads and site.amazon_ad_urls %}
-      <div class="post-list-item">
-        {% include amazon-ads.html %}
-      </div>
-      {% endif %}
-      {% if site.embed_adsense %}
-      <div class="post-list-item">
-        {%  include google-ad-block.html %}
-      </div>
-      {% endif %}
-    </div><!-- sidebar-container -->
+      {%  endfor%}
+      {%endif%}
+    </div><!-- post-sidebar-container -->
   </div><!-- post-sidebar -->
   {% endif %} <!-- end posts -->
 

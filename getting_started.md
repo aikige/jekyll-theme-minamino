@@ -61,32 +61,6 @@ twitter_username: aikige
 
 The tweet pain shows tweets of a user specified by `twitter_username`.
 
-### Google AdSense
-
-If following configuration is exist in `_config.yml`, google adsense related header will be included in the page and tries to embed advertisements.
-
-```yml
-adsense_client_id: ca-pub-9466084318094329
-```
-
-### Embedded Google Calender
-
-If following configuration is exist in `_config.yml`, google calender of specified URL will be shown as 1st article in article list.
-
-```yml
-google_calendar_url: https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=minamino.aikido%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FTokyo
-```
-
-### Embedded Amazon Affiliates
-
-If following configuration is exist in `_config.yml`, Amazon Affiliate box will be shown at Home Layout.
-
-```yml
-amazon_ad_urls: ['//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=F7F7F7&IS2=1&bg1=F7F7F7&fc1=000000&lc1=0000FF&t=gachin-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01BLA9QRU&linkId=03a9de537bfe7813cb06917a93e674ac', '//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=F7F7F7&IS2=1&bg1=F7F7F7&fc1=000000&lc1=0000FF&t=gachin-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4522426887&linkId=a81bcb0f7572b5d7dee8306f0c29f832']
-```
-
-Note that this parameter is expected to be an array.
-
 ### Image Width, Caption and Floating
 
 `image.html` provides function to control width, caption and floating for images.
