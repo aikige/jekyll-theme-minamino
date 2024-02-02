@@ -329,10 +329,13 @@ figure {
   margin: $vspacing-unit auto;
   width: fit-content;
   text-align: center;
+  display: table;
   img {
     display: inline-block;
   }
   figcaption {
+    display: table-caption;
+    caption-side: bottom;
     text-align: center;
   }
 }
