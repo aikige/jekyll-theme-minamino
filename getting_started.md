@@ -48,7 +48,7 @@ Otherwise, please make clone (or fork) of this repository and edit files.
 
 This theme contains following optional features:
 
-![Home Layout with Comment](assets/img/screenshot_1024_w_comment.png)
+![Home Layout with Comment](/assets/img/screenshot_1024_w_comment.png)
 
 ### Embedded Tweets
 
@@ -83,7 +83,7 @@ All parameters are optional.
 
 {%raw%}
 ```
-{%include image.html url="/assets/img/no_image.jpg"
+{%include image.html url="assets/img/no_image.jpg"
    description="test" width="100%"%}
 ```
 {%endraw%}
@@ -93,11 +93,11 @@ All parameters are optional.
 
 {%raw%}
 ```
-{%include image.html url="/assets/img/no_image.jpg"
+{%include image.html url="assets/img/no_image.jpg"
    description="float right" class="right" width="25%"%}
 ```
 {%endraw%}
-{%include image.html url="/assets/img/no_image.jpg" description="float right" class="right" width="25%"%}
+{%include image.html url="assets/img/no_image.jpg" description="float right" class="right" width="25%"%}
 
 And sample text follows the image...
 
@@ -126,11 +126,11 @@ Text to check behavior or floated text.
 
 {%raw%}
 ```
-{%include image.html url="/assets/img/no_image.jpg"
+{%include image.html url="assets/img/no_image.jpg"
    description="float left" class="left"%}
 ```
 {%endraw%}
-{%include image.html url="/assets/img/no_image.jpg" description="float left" class="left"%}
+{%include image.html url="assets/img/no_image.jpg" description="float left" class="left"%}
 
 And sample text follows the image...
 
@@ -173,9 +173,9 @@ This is the CSS trick to align images in markdown document.
 Examples:
 
 ```markdown
-![center](assets/img/no_image.jpg) and sample text follows the image
+![center](/assets/img/no_image.jpg) and sample text follows the image
 ```
-![center](assets/img/no_image.jpg)
+![center](/assets/img/no_image.jpg)
 *example of caption*
 
 and sample text follows the image.
@@ -183,9 +183,9 @@ and sample text follows the image.
 <hr class="clear">
 
 ```markdown
-![left](assets/img/no_image.jpg)
+![left](/assets/img/no_image.jpg)
 ```
-![left](assets/img/no_image.jpg) and sample text follows the image.
+![left](/assets/img/no_image.jpg) and sample text follows the image.
 
 Text to check behavior or floated text.
 Text to check behavior or floated text.
@@ -210,9 +210,9 @@ Text to check behavior or floated text.
 
 
 ```markdown
-![right](assets/img/no_image.jpg)
+![right](/assets/img/no_image.jpg)
 ```
-![right](assets/img/no_image.jpg)
+![right](/assets/img/no_image.jpg)
 
 and sample text follows the image.
 

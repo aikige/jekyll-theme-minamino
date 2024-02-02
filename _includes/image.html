@@ -7,14 +7,17 @@
 {%	assign fig_width="fit-content"%}
 {%	assign img_width="auto"%}
 {%endif%}
-{%if include.url=~ /^http/ %}
-{%	assign src=include.url%}
+{%if include.url contains "http:" %}
+{%	assign url=include.url%}
+{%elsif include.url contains "http:" %}
+{%	assign url=include.url%}
 {%else%}
-{%	capture src%}{{include.url|relative_url}}{%endcapture%}
+{%	capture url%}{{include.url|relative_url}}{%endcapture%}
 {%endif%}
 <figure class="{{class}}" style="width:{{fig_width}};">
-  <img style="width:{{img_width}};" src="{{src}}" alt="{{include.description}}">
+  <img style="width:{{img_width}};" src="{{url}}" alt="{{include.description}}">
   {%if include.description%}
   <figcaption>{{include.description}}</figcaption>
   {%endif%}
 </figure>
+<!-- vim: set sts=2 sw=2 expandtab: -->
