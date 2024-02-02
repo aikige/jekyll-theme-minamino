@@ -3,6 +3,8 @@ layout: post
 title: Include YouTube Video
 author: T.A
 description: How to post article which include youtube.
+image: https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg
+tags: ['feature']
 ---
 It is recommended to add `class="youtube"` like following:
 ```
