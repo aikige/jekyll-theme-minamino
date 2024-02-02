@@ -13,8 +13,8 @@ This project is also used as source of the website.
 * Support for embedded tweets.
 * Support for [Google AdSense](https://www.google.com/adsense).
 
-For detail about theme, please refer [`about.md`](about.md).
+For detail about theme, please refer [`about.md`](https://aikige.github.io/minamino-aikido/about.html)
 
-## Demo
+## Demo + Documents
 
 https://aikige.github.io/minamino-aikido/
