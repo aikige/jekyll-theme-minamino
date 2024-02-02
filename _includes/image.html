@@ -7,9 +7,8 @@
 {%	assign fig_width="fit-content"%}
 {%	assign img_width="auto"%}
 {%endif%}
-{%if include.url contains "http:" %}
-{%	assign url=include.url%}
-{%elsif include.url contains "http:" %}
+{%capture scheme%}{{include.url|slice:0,3}}{%endcapture%}
+{%if scheme == "http"%}
 {%	assign url=include.url%}
 {%else%}
 {%	capture url%}{{include.url|relative_url}}{%endcapture%}
