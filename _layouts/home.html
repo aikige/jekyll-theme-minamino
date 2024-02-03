@@ -35,10 +35,9 @@ layout: default
   {%  assign date_format = site.minamino.date_format | default: "%F" %}
   <div class="post-list">
     {% if site.post_list_title %}
-    <!-- start: post-list-heading -->
-    <h2 class="post-list-heading">{{ site.post_list_title }}</h2>
-    {% endif %} <!-- end: post-list-heading -->
-    <div class="post-list-container">
+    <h2 class="card-list-title">{{ site.post_list_title }}</h2>
+    {% endif %}
+    <div class="card-container">
       {% for post in posts %}
       {%  if post.image %}
       {%    assign background_image = post.image %}
@@ -46,7 +45,7 @@ layout: default
       {%  else %}
       {%    capture background_image_style %}style="background-image: url({{"/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
       {%  endif %}
-      <div class="post-list-item" {{ background_image_style }}>
+      <div class="card" {{ background_image_style }}>
         <div class="post-info">
           <div class="post-meta">{{ post.date | date: date_format }}</div>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -58,14 +57,14 @@ layout: default
   </div><!-- post-list -->
   <div class="post-sidebar">
     {% if site.post_list_title %}
-    <h2 class="post-list-heading">
+    <h2 class="card-list-title">
       &nbsp;<!-- place holder for layouting -->
     </h2>
     {% endif %}
-    <div class="post-sidebar-container">
+    <div class="card-container">
       {%if site.sidebar_list%}
       {%  for sidebar in site.sidebar_list%}
-      <div class="post-list-item">
+      <div class="card">
         {%include {{sidebar}}%}
       </div>
       {%  endfor%}
