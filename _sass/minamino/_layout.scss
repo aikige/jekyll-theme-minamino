@@ -250,9 +250,10 @@
   display: grid;
   grid-auto-rows: $card-unit-height;
   gap: $card-spacing;
-  grid-template-columns: repeat(auto-fit, minmax($card-unit-width, 1fr));
 }
-
+.post-sidebar-container {
+  grid-template-columns: 1fr;
+}
 .post-list-container {
   grid-template-columns: 1fr 1fr;
   @include media-query($on-1row) {
