@@ -133,13 +133,15 @@
 .footer-col-wrapper {
   @include relative-font-size(0.9);
   color: $grey-color;
-  margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
+}
+
+.footer-col:nth-child(n+2) {
   padding-left: $spacing-unit / 2;
 }
 
@@ -164,7 +166,6 @@
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
     width:         calc(50% - (#{$spacing-unit} / 2));
   }
-
   .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
@@ -176,6 +177,9 @@
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+  .footer-col:nth-child(n+2) {
+    padding-left: 0;
   }
 }
 
