@@ -134,6 +134,7 @@
   @include relative-font-size(0.9);
   color: $grey-color;
   display: flex;
+  flex-wrap: wrap;
   gap: $spacing-unit;
   /*@extend %clearfix;*/
 }
@@ -148,7 +149,7 @@
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width:         calc(35% - (#{$spacing-unit} / 2));
   */
-  width: 35%;
+  width: 30%;
 }
 
 .footer-col-2 {
@@ -183,6 +184,9 @@
 }
 
 @include media-query($on-palm) {
+  .footer-col-wrapper {
+    display: block;
+  }
   .footer-col {
     /*float: none;*/
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
