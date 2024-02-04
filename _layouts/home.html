@@ -9,18 +9,20 @@ layout: default
     {{ content }}
   </div>
   {%   include tweet-block.html %}
-  {%  endcapture %}<!-- main_content -->
+  {%  endcapture %}
   {% else %}
   {%  capture main_content %}
   <div class="home-content">
     {{ content }}
   </div>
-  {%  endcapture %}<!-- main_content -->
+  {%  endcapture %}
   {% endif %}
 
   {% if site.paginate %}
+  {%  unless paginator.previous_page %}
   <!-- content is shown for first page only -->
-  {%  unless paginator.previous_page %}{{ main_content }}{% endunless %}
+  {{ main_content }}
+  {% endunless %}
   {% else %}
   {{ main_content }}
   {% endif %}
@@ -40,10 +42,9 @@ layout: default
     <div class="card-container">
       {% for post in posts %}
       {%  if post.image %}
-      {%    assign background_image = post.image %}
-      {%    capture background_image_style %}style="background-image: url({{background_image}});"{% endcapture %}
+      {%    capture background_image_style %}style="background-image: url({{ post.image | relative_url }});"{% endcapture %}
       {%  else %}
-      {%    capture background_image_style %}style="background-image: url({{"/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
+      {%    capture background_image_style %}style="background-image: url({{ "/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
       {%  endif %}
       <div class="card" {{ background_image_style }}>
         <div class="post-info">
@@ -51,10 +52,13 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </div>
       </div>
-      {% endfor %} <!-- in posts -->
+      {% endfor %}<!-- end:for post in posts -->
     </div><!-- post-list-container -->
     {% include pagination.html %}
   </div><!-- post-list -->
+  {% endif %} <!-- end posts -->
+
+  {% if site.sidebar_list %}
   <div class="post-sidebar">
     {% if site.post_list_title %}
     <h2 class="card-list-title">
@@ -71,7 +75,7 @@ layout: default
       {%endif%}
     </div><!-- post-sidebar-container -->
   </div><!-- post-sidebar -->
-  {% endif %} <!-- end posts -->
+  {% endif %}
 
 </div><!-- home -->
 <!-- vim: set sts=2 sw=2 expandtab: -->
