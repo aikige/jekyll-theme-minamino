@@ -7,12 +7,7 @@
 {%	assign fig_width="fit-content"%}
 {%	assign img_width="auto"%}
 {%endif%}
-{%capture scheme%}{{include.url|slice:0,3}}{%endcapture%}
-{%if scheme == "http"%}
-{%	assign url=include.url%}
-{%else%}
-{%	capture url%}{{include.url|relative_url}}{%endcapture%}
-{%endif%}
+{%capture url%}{{include.url|relative_url}}{%endcapture%}
 <figure class="{{class}}" style="width:{{fig_width}};">
   <img style="width:{{img_width}};" src="{{url}}" alt="{{include.description}}">
   {%if include.description%}
