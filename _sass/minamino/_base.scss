@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -28,7 +27,6 @@ body {
 }
 
 
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -41,7 +39,6 @@ ul, ol, dl, figure,
 }
 
 
-
 /**
  * `main` element
  */
@@ -50,9 +47,8 @@ main {
 }
 
 
-
 /**
- * Images
+ * Images and Figures
  */
 img {
   max-width: 100%;
@@ -60,21 +56,55 @@ img {
   display: block;
 }
 
+p img, img[alt^="center"] {
+  margin: $vspacing-unit auto;
+}
 
+img[alt^="right"] {
+  margin: 0 0 $vspacing-unit $vspacing-unit;
+  float: right;
+}
 
-/**
- * Figures
- */
+img[alt^="left"] {
+  margin: 0 $vspacing-unit $vspacing-unit 0;
+  clear: both;
+  float: left;
+}
+
 figure {
+  margin: $vspacing-unit auto;
+  width: fit-content;
+  display: table;
   img {
     display: block;
     margin: 0 auto;
   }
   figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
     font-size: $small-font-size;
   }
 }
 
+figure.right {
+  clear: both;
+  float: right;
+  margin: 0 0 $vspacing-unit $vspacing-unit;
+}
+
+figure.left {
+  clear: both;
+  float: left;
+  margin: 0 $vspacing-unit $vspacing-unit 0;
+}
+
+hr.clear {
+  /* used to clear floating figure */
+  clear: both;
+  border: none;
+  margin: 0;
+}
 
 
 /**
@@ -92,14 +122,12 @@ li {
 }
 
 
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
-
 
 
 /**
@@ -145,7 +173,6 @@ blockquote {
 }
 
 
-
 /**
  * Code formatting
  */
@@ -175,7 +202,6 @@ pre {
 }
 
 
-
 /**
  * Wrapper
  */
@@ -188,7 +214,6 @@ pre {
 }
 
 
-
 /**
  * Clearfix
  */
@@ -199,11 +224,9 @@ pre {
 }
 
 
-
 /**
  * Icons
  */
-
 .svg-icon {
     width: 16px;
     height: 16px;
@@ -212,11 +235,16 @@ pre {
     padding-right: 5px;
     vertical-align: text-top;
 }
-
 .social-media-list {
   li + li {
     padding-top: 5px;
   }
+}
+.icon-left, .icon-home {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  fill: $grey-color;
 }
 
 
@@ -249,4 +277,27 @@ table {
     //border: 1px solid $grey-color-light;
   }
 }
+
+
+/**
+ * Advertisement
+ */
+.advertise {
+  text-align: center;
+}
+
+
+/**
+ * YouTube
+ */
+.youtube {
+  width: 560px;
+  height: 315px;
+  @include media-query(560px + $spacing-unit) {
+    width: 80vw;
+    height: 45vw;
+  }
+}
+
+
 /* vim:set sts=2 sw=2 expandtab: */

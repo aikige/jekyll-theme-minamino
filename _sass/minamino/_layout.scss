@@ -54,7 +54,7 @@
     margin-left: 10px;
   }
 
-  @include media-query($on-palm) {
+  @include media-query($on-2row) {
     position: absolute;
     top: 11px;
     right: $spacing-unit / 2;
@@ -151,7 +151,7 @@
   .footer-col-3 {
     flex: 1;
   }
-  @include media-query($on-laptop) {
+  @include media-query($on-2row) {
     .footer-col-1, .footer-col-2 {
       flex: 1;
       width: auto;
@@ -161,7 +161,7 @@
       width: 100%;
     }
   }
-  @include media-query($on-palm) {
+  @include media-query($on-1row) {
     display: block;
     .footer-col-1, .footer-col-2, .footer-col-3 {
       flex: none;
@@ -300,63 +300,14 @@ img.top {
   @include relative-font-size(1.5);
 }
 
-p img, img[alt^="center"] {
-  margin: $vspacing-unit auto;
-}
-
-img[alt^="right"] {
-  margin: 0 0 $vspacing-unit $vspacing-unit;
-  float: right;
-  @include media-query($on-palm) {
-    margin: $vspacing-unit auto;
-    float: none;
-  }
-}
-
-img[alt^="left"] {
-  margin: 0 $vspacing-unit $vspacing-unit 0;
-  clear: both;
-  float: left;
-  @include media-query($on-palm) {
-    margin: $vspacing-unit auto;
-    float: none;
-  }
-}
-
-figure {
-  margin: $vspacing-unit auto;
-  width: fit-content;
-  text-align: center;
-  display: table;
-  figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    text-align: center;
-  }
-}
-figure.right {
-  clear: both;
-  float: right;
-  margin: 0 0 $vspacing-unit $vspacing-unit;
-  @include media-query($on-palm) {
+@include media-query($on-2row) {
+  img[alt^="right"],
+  img[alt^="left"],
+  figure.right,
+  figure.left {
     float: none;
     margin: $vspacing-unit auto;
   }
-}
-figure.left {
-  clear: both;
-  float: left;
-  margin: 0 $vspacing-unit $vspacing-unit 0;
-  @include media-query($on-palm) {
-    float: none;
-    margin: $vspacing-unit auto;
-  }
-}
-
-hr.clear {
-  clear: both;
-  border: none;
-  margin: 0;
 }
 
 /**
@@ -377,27 +328,6 @@ hr.clear {
   line-height: $title-line-height;
 }
 
-/**
- * Advertisement
- */
-.advertise {
-  text-align: center;
-}
-
-/**
- * YouTube
- */
-.youtube {
-  width: 560px;
-  height: 315px;
-  @include media-query(560px + $spacing-unit) {
-    width: 80vw;
-    height: 45vw;
-  }
-}
-
-.icon-left { width: 32px; height: 32px; fill: $grey-color; }
-.icon-home { width: 32px; height: 32px; fill: $grey-color; }
 .back {
   clear: both;
   margin: $spacing-unit auto;
@@ -408,10 +338,12 @@ hr.clear {
     vertical-align: middle;
   }
 }
+
 .page-link .icon-home {
-  display: inline-block;
   vertical-align: 0px;
-  width: 18px; height: 18px;
+  width: 16px;
+  height: 16px;
   fill: $text-color;
 }
+
 /* vim:set sts=2 sw=2 expandtab: */
