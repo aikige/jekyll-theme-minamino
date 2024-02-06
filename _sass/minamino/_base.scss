@@ -65,12 +65,14 @@ img {
 /**
  * Figures
  */
-figure > img {
-  display: block;
-}
-
-figcaption {
-  font-size: $small-font-size;
+figure {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  figcaption {
+    font-size: $small-font-size;
+  }
 }
 
 
