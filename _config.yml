@@ -32,24 +32,10 @@ paginate: 6
 tagline: "demonstration of A simple Jekyll theme - minamino-aikido"
 embed_tweets: no
 sidebar_list: ["google-calendar.html","google-adsense.html"]
-home_link_list: [
-  {
-    "url":"about.html",
-    "name":"About",
-    "image":"https://minamino-aikido.github.io/assets/img/Kokyunage_201610.JPG",
-    "description":"About this site"
-  },
-  {
-    "url":"getting_started.html",
-    "name":"Getting Started",
-    "image":"https://minamino-aikido.github.io/assets/img/20231015_Enbu03.jpg"
-  },
-  {
-    "url":"sitemap.html",
-    "name":"Sitemap",
-    "image":"/assets/img/no_image.jpg"
-  }
-]
+home_pages:
+  - about.md
+  - getting_started.md
+  - sitemap.html
 google_calendar_url: https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=240&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=minamino.aikido%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FTokyo
 adsense_client_id: ca-pub-9466084318094329
 post_list_title: "Blog Posts..."

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+image: https://minamino-aikido.github.io/assets/img/Kokyunage_201610.JPG
+description: About this page
 ---
 
 The theme minamino-aikido ([github repository](https://github.com/aikige/minamino-aikido)) is created for website of [Minamino Aikido Club](https://minamino-aikido.github.io/), based on [minima-2.5.1](https://github.com/jekyll/minima/releases/tag/v2.5.1).

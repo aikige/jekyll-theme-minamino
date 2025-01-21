@@ -1,6 +1,7 @@
 ---
 title: Getting Started
 layout: page
+image: https://minamino-aikido.github.io/assets/img/20231015_Enbu03.jpg"
 ---
 
 ## Quick Start Guide

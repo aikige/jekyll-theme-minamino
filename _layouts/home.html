@@ -4,36 +4,43 @@ layout: default
 
 <div class="home">
   {% if site.embed_tweets %}
+  <!-- *** embed tweet mode *** -->
   {%  capture main_content %}
   <div class="home-w-sidebar">
     {{ content }}
   </div>
-  <div class="tweet-container"><!-- sidebar for tweets -->
+  <!-- sidebar for tweets -->
+  <div class="tweet-container">
   {%  include tweet-block.html %}
   </div>
   {%  endcapture %}
-  {% elsif site.home_link_list %}
+  {% elsif site.home_pages %}
+  <!-- *** home page list mode *** -->
   {%  capture main_content %}
   <div class="home-w-sidebar">
     {{ content }}
   </div>
   <div class="home-sidebar-container">
-    {% for link in site.home_link_list %}
-    {%  if link.image %}
-    {%    capture background_image_style %}style="background-image: url({{ link.image | relative_url }});"{% endcapture %}
-    {%  endif %}
+    {% for path in site.home_pages %}
+    {%  assign page = site.pages | where: "path", path | first %}
+    {%  if page.title %}
+    {%    if page.image %}
+    {%      capture background_image_style %}style="background-image: url({{ page.image | relative_url }});"{% endcapture %}
+    {%    endif %}
     <div class="card" {{ background_image_style }}>
       <div class="post-info" style="text-align:center">
-        <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
-        {% if link.description %}
-        <p class="post-meta">{{ link.description }}</p>
+        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+        {% if page.description %}
+        <p class="post-meta">{{ page.description }}</p>
         {% endif %}
       </div>
     </div>
+    {%  endif %}
     {% endfor %}
   </div>
   {%  endcapture %}
   {% else %}
+  <!-- *** simple home mode *** -->
   {%  capture main_content %}
   <div class="home-content">
     HOGE
