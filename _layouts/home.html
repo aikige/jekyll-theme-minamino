@@ -24,6 +24,7 @@ layout: default
     {% for path in site.home_pages %}
     {%  assign page = site.pages | where: "path", path | first %}
     {%  if page.title %}
+    {%    assign background_image_style = "" %}
     {%    if page.image %}
     {%      capture background_image_style %}style="background-image: url({{ page.image | relative_url }});"{% endcapture %}
     {%    endif %}
@@ -37,13 +38,12 @@ layout: default
     </div>
     {%  endif %}
     {% endfor %}
-  </div>
+  </div><!-- home-sidebar-container -->
   {%  endcapture %}
   {% else %}
   <!-- *** simple home mode *** -->
   {%  capture main_content %}
   <div class="home-content">
-    HOGE
     {{ content }}
   </div>
   {%  endcapture %}
@@ -84,7 +84,7 @@ layout: default
         </div>
       </div>
       {% endfor %}<!-- end:for post in posts -->
-    </div><!-- post-list-container -->
+    </div><!-- card-container -->
     {% include pagination.html %}
   </div><!-- post-list -->
   {% endif %} <!-- end posts -->
@@ -104,7 +104,7 @@ layout: default
       </div>
       {%  endfor%}
       {%endif%}
-    </div><!-- post-sidebar-container -->
+    </div><!-- card-container -->
   </div><!-- post-sidebar -->
   {% endif %}
 
