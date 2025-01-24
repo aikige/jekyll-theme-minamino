@@ -38,7 +38,7 @@ layout: default
     </div>
     {%  endif %}
     {% endfor %}
-  </div><!-- home-sidebar-container -->
+  </div><!-- end:home-sidebar-container -->
   {%  endcapture %}
   {% else %}
   <!-- *** simple home mode *** -->
@@ -64,12 +64,15 @@ layout: default
   {%  assign posts = site.posts %}
   {% endif %}
 
-  {% if posts.size > 0 %} <!-- start: posts -->
+  {% if posts.size > 0 %}
+  <!-- start posts -->
+  {%  if site.post_list_title %}
+  <div class="post-list-title">
+    <h2 class="card-list-title">{{ site.post_list_title }}</h2>
+  </div>
+  {%  endif %}
   {%  assign date_format = site.minamino.date_format | default: "%F" %}
   <div class="post-list">
-    {% if site.post_list_title %}
-    <h2 class="card-list-title">{{ site.post_list_title }}</h2>
-    {% endif %}
     <div class="card-container">
       {% for post in posts %}
       {%  if post.image %}
@@ -84,18 +87,13 @@ layout: default
         </div>
       </div>
       {% endfor %}<!-- end:for post in posts -->
-    </div><!-- card-container -->
+    </div><!-- end:card-container -->
     {% include pagination.html %}
-  </div><!-- post-list -->
-  {% endif %} <!-- end posts -->
-
-  {% if site.sidebar_list %}
+  </div><!-- end:post-list -->
+  <!-- end posts -->
+  {%  if site.sidebar_list %}
+  <!-- start post sidebar -->
   <div class="post-sidebar">
-    {% if site.post_list_title %}
-    <h2 class="card-list-title">
-      &nbsp;<!-- place holder for layouting -->
-    </h2>
-    {% endif %}
     <div class="card-container">
       {%if site.sidebar_list%}
       {%  for sidebar in site.sidebar_list%}
@@ -104,8 +102,10 @@ layout: default
       </div>
       {%  endfor%}
       {%endif%}
-    </div><!-- card-container -->
-  </div><!-- post-sidebar -->
+    </div><!-- end:card-container -->
+  </div><!-- end:post-sidebar -->
+  <!-- end sidebar -->
+  {%  endif %}
   {% endif %}
 
 </div><!-- home -->
