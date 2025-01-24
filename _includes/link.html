@@ -7,5 +7,5 @@
 {%  assign target_page = site.posts | where: "path", post_path | first %}
 {% endunless %}
 {% if target_page and target_page.title %}
-<a href="{{target_page.url}}">{{target_page.title}}</a>
+<div style="display:inline-block"><a href="{{target_page.url}}">{{target_page.title}}</a></div>
 {% endif %}
