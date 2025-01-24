@@ -1,7 +1,7 @@
 ---
 title: "Experimental Feature: Google AdSense"
 image: https://upload.wikimedia.org/wikipedia/commons/a/af/Google_adsense.jpg
-tags: ['feature']
+tags: feature
 ---
 
 This theme includes following modules in `_includes` to use Google AdSense in websites. But features are not confirmed.
