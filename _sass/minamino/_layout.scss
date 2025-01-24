@@ -210,6 +210,12 @@
     grid-template-columns: 1fr;
     grid-auto-rows: 210px;
   }
+  .post-list-title {
+    grid-column: 1/3;
+    .card-list-title {
+      margin-bottom: 0;
+    }
+  }
   .post-list {
     grid-column: 1/3;
     .card-container {
