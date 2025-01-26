@@ -290,7 +290,7 @@ table {
 /**
  * YouTube
  */
-.youtube {
+.youtube, iframe[src^="https://www.youtube.com/"] {
   width: 560px;
   height: 315px;
   @include media-query(560px + $spacing-unit) {
