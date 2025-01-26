@@ -1,5 +1,5 @@
 ---
-title: "Experimental Feature: Google AdSense"
+title: Post Sidebar - Google AdSense (Experimental)
 image: https://upload.wikimedia.org/wikipedia/commons/a/af/Google_adsense.jpg
 tags: feature
 ---
