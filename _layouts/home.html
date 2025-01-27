@@ -88,25 +88,50 @@ layout: default
       </div>
       {% endfor %}<!-- end:for post in posts -->
     </div><!-- end:card-container -->
-    {% include pagination.html %}
   </div><!-- end:post-list -->
   <!-- end posts -->
   {%  if site.sidebar_list %}
   <!-- start post sidebar -->
   <div class="post-sidebar">
     <div class="card-container">
-      {%if site.sidebar_list%}
+      <!-- sidebar includes -->
+      {% if site.sidebar_list %}
       {%  for sidebar in site.sidebar_list%}
       <div class="card">
-        {%include {{sidebar}}%}
+        {% include {{sidebar}} %}
       </div>
-      {%  endfor%}
-      {%endif%}
+      {%  endfor %}
+      {% endif %}
+      <!-- pickup posts -->
+      {% for path in site.pickup_posts %}
+      {%  assign item = site.pages | where: "path", path | first %}
+      {%  unless item %}
+      {%    assign item = site.posts | where: "path", path | first %}
+      {%  endunless %}
+      {%  unless item %}
+      {%    capture post_path %}_posts/{{path}}{% endcapture %}
+      {%    assign item = site.posts | where: "path", post_path | first %}
+      {%  endunless %}
+      {%  if item.image %}
+      {%    capture background_image_style %}style="background-image: url({{ item.image | relative_url }});"{% endcapture %}
+      {%  else %}
+      {%    capture background_image_style %}style="background-image: url({{ "/assets/img/no_image.jpg" | relative_url}});"{% endcapture %}
+      {%  endif %}
+      <div class="card" {{background_image_style}}>
+        <div class="post-info">
+          {% if item.date %}
+          <div class="post-meta">{{ item.date | date: date_format }}</div>
+          {% endif %}
+          <a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+        </div>
+      </div>
+      {% endfor %}
     </div><!-- end:card-container -->
   </div><!-- end:post-sidebar -->
   <!-- end sidebar -->
   {%  endif %}
   {% endif %}
+  {% include pagination.html %}
 
 </div><!-- home -->
 <!-- vim: set sts=2 sw=2 expandtab: -->
