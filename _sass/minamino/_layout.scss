@@ -319,7 +319,7 @@ img.top {
   @include relative-font-size(1.5);
 }
 
-@include media-query($on-2row) {
+@include media-query($on-1row) {
   img[alt^="right"],
   img[alt^="left"],
   figure.right,

@@ -1,17 +1,17 @@
-{%assign class="center"%}
-{%assign class=include.class if include.class%}
-{%if include.width%}
-{%	assign fig_width=include.width%}
-{%	assign img_width="100%"%}
-{%else%}
-{%	assign fig_width="fit-content"%}
-{%	assign img_width="auto"%}
-{%endif%}
-{%capture url%}{{include.url|relative_url}}{%endcapture%}
-<figure class="{{class}}" style="width:{{fig_width}};">
+{%- assign class="center" -%}
+{%- assign class=include.class if include.class -%}
+{%- if include.width -%}
+{%-	  assign fig_width=include.width -%}
+{%-	  assign img_width="100%" -%}
+{%- else -%}
+{%-   assign fig_width="fit-content" -%}
+{%-   assign img_width="auto" -%}
+{%- endif -%}
+{%- capture url -%}{{include.url|relative_url}}{%- endcapture -%}
+<figure class="{{class}}" style="width:{{fig_width}};max-width:100%;">
   <img style="width:{{img_width}};" src="{{url}}" alt="{{include.description}}">
-  {%if include.description%}
+  {%- if include.description -%}
   <figcaption>{{include.description}}</figcaption>
-  {%endif%}
+  {%- endif -%}
 </figure>
 <!-- vim: set sts=2 sw=2 expandtab: -->
