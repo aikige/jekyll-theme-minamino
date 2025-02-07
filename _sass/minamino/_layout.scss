@@ -123,6 +123,7 @@
 
 .footer-heading {
   @include relative-font-size(1);
+  word-break: keep-all;
 }
 
 .contact-list,
